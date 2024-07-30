@@ -23,7 +23,10 @@ describe("Rover class", function() {
       let message=new Message('Test message with two commands', commands);
       let response = r.receiveMessage(message);
   
-      expect( response.message ).toBe(message.name);
+      //expect( response.message ).toBe(message.name);
+      //expect( response.message ).toBe("Test message with two commands");//
+      expect( response.message ).toEqual("Test message with two commands");
+
     });
 
 
